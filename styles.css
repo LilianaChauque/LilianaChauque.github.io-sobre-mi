@@ -1,0 +1,79 @@
+body{
+    background-color: rgb(127, 229, 255);
+   
+}    
+
+.text{
+    border: 5px solid rgba(218, 165, 32, 0.747);
+    column-rule-color: black;
+    padding: 2px;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+   
+    
+}
+h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgba(0, 0, 255, 0.644);
+    text-decoration: underline;
+}
+
+
+p{
+    color:black;
+    font-size: 40;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+/*Iba a usar lo que esta en comentarios pero decidi no hacerlo, porque no me convencio, asi que puse 40px de margen en imagen en vez de 10px, me parecio mejor.*/
+/*article{
+    border: 1px solid goldenrod;
+    margin: 20px;
+    margin-left: 40px;
+    padding: 5px;
+    font-size: 10px;
+}*/
+
+ul{
+    list-style-type: circle;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: brown;
+}
+
+img{
+    height:250px;
+    width: 350px;
+    margin: 40px;
+    flex-grow: 1;
+}   
+
+ 
+/*.img-container{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+}
+
+.video-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}*/
+
+.frase{
+    border: 5px solid rgba(218, 165, 32, 0.747);
+    margin: 20px;
+    margin-left: 20px;
+    padding: 2px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: black;
+
+}
