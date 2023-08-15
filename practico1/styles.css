@@ -1,0 +1,64 @@
+
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: solid;
+    border-style:hidden;
+    background-color: aquamarine;
+    margin:10px;
+    border-radius: 10px;
+
+}
+body {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    background-color:rgb(237, 235, 100);
+    color: black;
+    padding: 2.5px;
+    margin: auto;
+
+}
+
+.conteiner {
+    background-color:rgba(43, 226, 217, 0.336);
+    display: block;
+    width: 300px;
+    height: 80px;
+    border: 15px solid gray;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 15px;
+    font-size: 20;
+}
+
+input {
+    background-color: rgb(223, 209, 191);
+    border-radius: 4px;
+    text-align:start;
+}
+
+#calcular {
+    background-color: rgb(188, 142, 231);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#limpiar{
+    background-color: violet;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select {
+    background-color: rgb(104, 186, 201);
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
