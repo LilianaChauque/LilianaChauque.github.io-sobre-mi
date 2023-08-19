@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(126, 223, 191);
+    text-align: center;
+}
+    
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px pink;
+    
+}
+
+
+.jugador{
+    padding: 40px;
+   
+}
+
+.botones{
+    padding: 40px;      
+}
+
+#nombre{
+    border: solid rgba(0, 0, 0, 0.493);    
+}
+
+#enviar{
+    background-color: rgb(212, 216, 192);
+    cursor: pointer;
+    margin: 10px;
+}
+
+#piedra{
+    cursor: pointer;
+    margin: 15px;
+}
+
+#papel{
+    cursor: pointer;
+    margin: 15px;
+
+}
+
+#tijera{
+    cursor: pointer;
+    margin: 15px;
+}
