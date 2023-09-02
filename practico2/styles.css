@@ -1,26 +1,47 @@
 body{
     background-color: rgb(126, 223, 191);
-    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  
 }
     
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 1px 1px 2px pink;
+
+}
+
+.nombreUsuario{
+    padding: 16px;
+    border-radius: 3rem;
+    margin: auto;
     
 }
 
-
-.jugador{
-    padding: 40px;
-   
-}
-
 .botones{
-    padding: 40px;      
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border: solid rgba(0, 0, 0, 0.493);  
+    text-align: center;  
+    border: 30spx;
 }
+
+p{
+    font-style: italic;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation:backwards;
+}
+
+
 
 #nombre{
-    border: solid rgba(0, 0, 0, 0.493);    
+    border: solid rgba(0, 0, 0, 0.493);  
+    text-align: center;  
 }
 
 #enviar{
@@ -44,3 +65,6 @@ h1{
     cursor: pointer;
     margin: 15px;
 }
+
+
+

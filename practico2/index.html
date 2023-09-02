@@ -6,17 +6,20 @@
     <title>Piedra, Papel o Tijera</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
     <h1>Piedra, Papel o Tijera!!!</h1>
-    <div class = "jugador">
+    <div class = "nombreUsuario">
          <input type="text" name="" id="nombre" autofocus placeholder="Escribe tu nombre: ">
          <button id="enviar" onclick="agregarNombre()">Enviar</button>
     </div>
 
-    </div class="botones">
-         <button id="piedra">Piedra</button>
-         <button id="papel">Papel</button>
-         <button id="tijera">Tijera</button>
-    </div>
+    </div class = "juegoUsuario" id = "ingresa">
+        <p>Elegi tu jugada</p>
+    </div class ="botones">
+             <button id="piedra"><img src="imagenes/piedra.png" width="100" height="100" alt="piedra"></button>
+             <button id="papel"><img src="imagenes/papel.jpg" width="100" height="100"alt="papel"></button>
+             <button id="tijera"><img src="imagenes/tijera.jpg" width="100" height="100" alt="tijera"></button>
+       
     <script src="script.js"></script>
 </body>
 </html>
