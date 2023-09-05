@@ -10,16 +10,22 @@
     <h1>Piedra, Papel o Tijera!!!</h1>
     <div class = "nombreUsuario">
          <input type="text" name="" id="nombre" autofocus placeholder="Escribe tu nombre: ">
-         <button id="enviar" onclick="agregarNombre()">Enviar</button>
+         <button id="enviar" onclick="agregarNombre()"> Enviar </button>
     </div>
-
-    </div class = "juegoUsuario" id = "ingresa">
-        <p>Elegi tu jugada</p>
+    </div id = "aJugar">
+        <p> Todos sabemos las reglas del juego, vas contra PC. Suerte!!! Elije tu jugada: </p>
+    </div>     
     </div class ="botones">
-             <button id="piedra"><img src="imagenes/piedra.png" width="100" height="100" alt="piedra"></button>
-             <button id="papel"><img src="imagenes/papel.jpg" width="100" height="100"alt="papel"></button>
-             <button id="tijera"><img src="imagenes/tijera.jpg" width="100" height="100" alt="tijera"></button>
-       
+            <button id="piedra"><img src="imagenes/piedra.png" width="75" height="75" alt="piedra"></button>
+            <button id="papel"><img src="imagenes/papel.jpg" width="75" height="75"alt="papel"></button>
+            <button id="tijera"><img src="imagenes/tijera.jpg" width="75" height="75" alt="tijera"></button>
+    </div> 
+    </div  class = "marcador">
+        <p id="rdoJugada"> </p>
+        <p class = "puntos puntosJugador">Jugador</p> <span id = "puntoUsuario">0</span>
+        <p class = "puntos puntosPC">Computadora</p> <span id = "puntoCompu">0</span>
+        
+    </div>  
     <script src="script.js"></script>
 </body>
 </html>
