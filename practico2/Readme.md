@@ -18,3 +18,8 @@
  *  En `index.html` Establecí las reglas del juego, con _p_ en un parrafo, tambien agregue un _div_ en el cual se encuentra el marcador del juego, donde se va sumando la cantidad de puntos que obtienen los jugadores (usuario y PC).
  * En `styles.css`le di estilo a lo que incorporamos en `index.html`.
  * En  `script.js` se determina el ganador de las partidas que se juegan y se muestra por pantalla quien la gano y que eligio la PC. Todo esto con las funciones que se añadieron y algunas modificaciones en otras.
+
+ ## Control del juego y anunciar al ganador y reiniciar el juego.
+  * En`index.html` agregue al _p id = " a jugar"_ agregamos que el ganador del juego sera el que obtenga tres victorias de cinco intentos. En _p id=rdoJugada_ se anuncia al ganador de la partida; como así también al ganador del juego, una vez obtenido los tres puntos necesarios. Se agrego una _class_ que contiene un _p id="rdoJuego_ que dice _"El juego ha terminado. Reinicie para jugar de nuevo."_ .
+   * En `script.js` el la _funtion determinarGanador()_ agrego las condiciones para que el ganador del juego y el pedido de reinicio del juego, para continuar jugando. Que se puede hacer con _onclick_ que llama a la _función reinicioJuego()_ que restablece los marcadores.
+   * En `styles.css` le dí estilo a _id=rdoJuego y a id=reinicioJuego_.

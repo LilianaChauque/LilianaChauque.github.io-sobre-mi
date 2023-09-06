@@ -13,7 +13,8 @@
          <button id="enviar" onclick="agregarNombre()"> Enviar </button>
     </div>
     </div id = "aJugar">
-        <p> Todos sabemos las reglas del juego, vas contra PC. Suerte!!! Elije tu jugada: </p>
+        <p> Todos sabemos las reglas del juego, vas contra PC. El ganador del juego será: el primer jugador en alcanzar 3 puntos de 5 intentos.
+            Suerte!!! Elije tu jugada: </p>
     </div>     
     </div class ="botones">
             <button id="piedra"><img src="imagenes/piedra.png" width="75" height="75" alt="piedra"></button>
@@ -24,7 +25,13 @@
         <p id="rdoJugada"> </p>
         <p class = "puntos puntosJugador">Jugador</p> <span id = "puntoUsuario">0</span>
         <p class = "puntos puntosPC">Computadora</p> <span id = "puntoCompu">0</span>
+        <p  id="rdoJuego"> </p>
+    <div>
+    <div class="finJuego">
         
+        <button id = "reinicioJuego" onclick="reiniciarJuego()"> Reiniciar juego </button>
+        
+    </div>    
     </div>  
     <script src="script.js"></script>
 </body>

@@ -1,5 +1,5 @@
 let $nombreInput = document.getElementById("nombre");
-let saludoNombre = document.getElementById("aJugar");
+
 // Función que agrega el nombre del jugador.
 
 function agregarNombre() {
@@ -9,7 +9,8 @@ function agregarNombre() {
     }
     else{  
       alert("Hola, " + nombre +"!!!");//Saludo personalizado para el jugador.
-       return;
+     
+       
     }
        
 }
@@ -20,41 +21,39 @@ function agregarNombre() {
     let msjganador = document.getElementById("rdoJugada");
     let marcadorPuntoUsuario = document.getElementById("puntoUsuario");
     let marcadorPuntoCompu = document.getElementById("puntoCompu");
+    let msjWinJuego = document.getElementById("rdoJuego");
     let puntoUsuario = 0;
     let puntoCompu = 0;
+    let puntosMaxJugador = 3;
     let jugadaUsuario;
     let jugadaCompu;
-    let resultado;
+    let juegoTerminado = false; //variable para corroborar si el juego termino o no.
            
 
 /* obtenemos la jugada del usuario cuando hacemos click en la imagen, 
 a su vez llamamos a la jugada de la PC, invocando la función  obtenerJugadaComputadora()*/
 
 
-$piedraButton.addEventListener("click",  () =>{
+$piedraButton.addEventListener("click",  () =>{   
     jugadaUsuario = "piedra";
     console.log(jugadaUsuario); // Utilizo console.log para ver si funciona.
     obtenerJugadaComputadora();
-    
-   
+      
 });
 
-$papelButton.addEventListener("click", ()=>{
+$papelButton.addEventListener("click", ()=>{    
     jugadaUsuario = "papel";
     console.log(jugadaUsuario);
-    obtenerJugadaComputadora();
-   
-   
+    obtenerJugadaComputadora();  
+
 });
 
 $tijeraButton.addEventListener("click", ()=>{
     jugadaUsuario = "tijera";
     console.log(jugadaUsuario);
     obtenerJugadaComputadora();
-    
    
 });
-
 
 
  // Obtenemos la jugada de la computadora de manera aleatoria
@@ -66,8 +65,9 @@ $tijeraButton.addEventListener("click", ()=>{
      determinarGanador();
     
  }
- //definimos una función para saber quien gana la partida, mostrando el rdo con innerHTML.
+ 
  function determinarGanador(){
+//Esta parte de la función para saber quien gana la partida, mostrando el rdo con innerHTML.
     if (jugadaUsuario === jugadaCompu){
         msjganador.innerHTML= "Uh, empate! 😐  ambos eligieron " + jugadaUsuario;  
     }
@@ -79,18 +79,46 @@ $tijeraButton.addEventListener("click", ()=>{
     }
      else{
         msjganador.innerHTML="Gano la PC... 😠 eligio " + jugadaCompu;
-        ganaCompu()
+        ganaCompu();
      }
- }
+     
+     // para determinar el ganador del juego
+     if ( puntoUsuario === puntosMaxJugador ){        
+        msjganador.innerHTML= "GANASTE EL JUEGO!!! 😃 😆";
+        juegoTerminado === true;
+        msjWinJuego.innerHTML= "El juego ha terminado. Reinicie para jugar de nuevo.";
+        
+     }
+     else if( puntoCompu === puntosMaxJugador) {        
+        msjganador.innerHTML= "PERDISTE EL JUEGO... 😠 😠 😠 ";
+        juegoTerminado === true;
+        msjWinJuego.innerHTML= "El juego ha terminado. Reinicie para jugar de nuevo.";
+       
+     }
+
+    }
  // defino función para el marcador, así se puede observar por monitor cuantos puntos tiene cada uno.
-function ganaCompu(){    
-    puntoCompu++;   
+function ganaCompu(){       
+    puntoCompu++;       
     marcadorPuntoCompu.innerHTML = puntoCompu;
-    
-}
-    
-function ganaUsuario(){
+ }
+
+        
+function ganaUsuario(){   
     puntoUsuario++; 
     marcadorPuntoUsuario.innerHTML = puntoUsuario;   
-   
 }
+
+function reiniciarJuego(){ // Retablecemos las variables a su valor original
+    nombre = ""; 
+    $nombreInput.value = "";
+    $nombreInput.focus();// restablesco el enfoque en el campo de entrada de nombre
+    puntoCompu = 0;
+    puntoUsuario = 0;
+    juegoTerminado = false;
+    msjganador.innerHTML = "";
+    msjWinJuego.innerHTML = "";
+    marcadorPuntoCompu.innerHTML = "0";
+    marcadorPuntoUsuario.innerHTML = "0";
+    
+}   

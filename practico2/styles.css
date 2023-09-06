@@ -1,6 +1,6 @@
 body{
     background-color: rgb(66, 152, 123);
-    margin: 20px;
+    margin:15px;
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -48,6 +48,7 @@ p{
     background-color: rgb(212, 216, 192);
     cursor: pointer;
     margin: 10px;
+    border-radius: 4px;
 }
 
 #piedra{
@@ -79,3 +80,21 @@ p{
     text-shadow: 1px 1px 2px pink;
     font-size: large;
 }
+
+#rdoJuego{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px pink;
+    font-size: large;
+    margin: 10;
+}
+
+#reinicioJuego{
+    border: solid;
+    background-color: rgb(212, 216, 192);
+    cursor: pointer;
+    margin: auto;
+    margin: 5px;
+    border-radius: 4px;
+}
+
