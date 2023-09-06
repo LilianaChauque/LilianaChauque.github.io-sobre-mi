@@ -1,12 +1,31 @@
 body{
-    background-color: rgb(66, 152, 123);
+   /* background-color: rgb(66, 152, 123);*/
     margin:15px;
+    margin-left: 15rem;
+    margin-right: 15rem;
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content: center;
-  
+    background-color: rgb(66, 152, 123); /* Color de fondo inicial */
+    animation-name: cambio-color; /* Nombre de la animación */
+    animation-duration: 4s; /* Duración de la animación */
+    animation-timing-function: linear; /* Función de temporización (lineal en este caso) */
+    animation-iteration-count: infinite; /* Repetir infinitamente */
+
 }
+    @keyframes cambio-color {
+        0% {
+            background-color: rgb(66, 152, 123);
+        }
+        50% {
+            background-color: rgb(43, 130, 101);
+        }
+        100% {
+            background-color: rgb(69, 166, 69);
+        }
+    } 
+        
     
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -14,12 +33,12 @@ h1{
 
 }
 
-.nombreUsuario{
+/*.nombreUsuario{
     padding: 16px;
     border-radius: 3rem;
     margin: auto;
     
-}
+}*/
 
 .botones{
     display: flex;
@@ -34,9 +53,23 @@ p{
     color: rgb(21, 5, 35);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 1px 1px 2px pink;
-    font-size: large;
+    font-size: large;  
+    /* uso animación de desplazamiento*/
+    animation-duration: 3s;
+    animation-name: slidein;
 }
-
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+  
 
 
 #nombre{
@@ -49,22 +82,53 @@ p{
     cursor: pointer;
     margin: 10px;
     border-radius: 4px;
+    transition: bacground-color 0.3; /*transición suave para el cambio de color*/
 }
+
+#enviar:hover{
+    background-color:rgb(170, 112, 188) ;/* cambia de color cuando el mouse pasa sobre "Enviar" */
+}
+
+#enviar:active{
+    background-color: rgb(143, 143, 230); /* Cambio de color de fondo cuando se hace clic en "Enviar" */
+}
+
 
 #piedra{
     cursor: pointer;
     margin: 15px;
+    transition: bacground-color 0.3; 
+}
+#piedra:hover{
+    background-color:rgb(170, 112, 188) ;/* cambia de color cuando el mouse pasa sobre "Enviar" */
+}
+
+#piedra:active{
+    background-color: rgb(143, 143, 230); /* Cambio de color de fondo cuando se hace clic en "Enviar" */
 }
 
 #papel{
     cursor: pointer;
     margin: 15px;
+    transition: bacground-color 0.3;
+}
 
+#papel:hover{
+    background-color:rgb(170, 112, 188) ;/* cambia de color cuando el mouse pasa sobre "Enviar" */
 }
 
 #tijera{
     cursor: pointer;
     margin: 15px;
+    transition: bacground-color 0.3;
+}
+
+#tijera:hover{
+    background-color:rgb(170, 112, 188) ;/* cambia de color cuando el mouse pasa sobre "Enviar" */
+}
+
+#tijera:active{
+    background-color: rgb(143, 143, 230); /* Cambio de color de fondo cuando se hace clic en "Enviar" */
 }
 
 #puntoUsuario{
